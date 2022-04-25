@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+
+    <input type="number" id="firstInput">
+    <input type="number" id="secondInput">
+     
+    <button onclick="calculate(this.value);" value="Add">Addition(+)</button>
+    <h2 id="result">RESULT: </h2>
+    <script>
+        function calculate(value) {
+            var num1 = parseFloat(document.getElementById('firstInput').value);
+            var num2 = parseFloat(document.getElementById('secondInput').value);
+
+           
+
+            var value = event.value;
+            
+           if (value === "Add") {
+              alert(value);
+           }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Giá Hoa Quả</h1>
+    <br>
+        <input type="text" id="Multifruit">
+
+        <button onclick="inputFruit()">Xem giá</button>
+        
+        <h2 id="Price"></h2>
+    <script>
+        function inputFruit() {
+            var price;
+            var fruits = document.getElementById("Multifruit").value;
+            switch (fruits) {
+            case "Ổi":
+            case "Dưa Hấu":
+              price = "20000 VNĐ/KG";
+              break;
+            case "Táo":
+            case "Xoài":
+              price = "30000 VNĐ/KG";
+              break;
+            case "Cam":
+            case "Chôm Chôm":
+                price = "40000 VNĐ/KG";
+                break;
+            case "Măng Cụt":
+                price = "50000 VNĐ/KG";  
+                break;
+        }
+        document.getElementById("Price").textContent = price;
+    }
+    </script>
+</body>
+</html>

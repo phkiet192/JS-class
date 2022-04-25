@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tính điểm ĐH khối D</h1>
+    <label for="Math">Math point</label>
+    <input type="text" id="mathPoint"><br><br>
+    <label for="Lit">Lit point</label>
+    <input type="text" id="litPoint"><br><br>
+    <label for="English">English point</label>
+    <input type="text" id="engPoint"><br><br>
+    <label for="sectionA">Khu vực</label>
+    <select name="section" id="sectionPoint">
+        <option value="1">KV1</option>
+        <option value="2">KV2</option>
+        <option value="3">KV3</option>
+        <option value="4">KV4</option>
+    </select>
+    <button onclick="Calcula()"> Tính điểm </button>
+    <p id="outpoint"></p>
+    <script>
+      
+      function Calcula() {
+        let Mp = parseInt(document.getElementById("mathPoint").value) ;
+      let Lp = parseInt(document.getElementById("litPoint").value) ;
+      let Ep = parseInt(document.getElementById("engPoint").value) ;
+      var Sum = Mp + Lp + Ep;
+        var Outpoint;
+        var countPoint = document.getElementById("sectionPoint").value;
+        
+          switch(countPoint) {
+            case "1":
+                Outpoint = Sum + 0.75;
+                break;
+            case "2":
+                Outpoint = Sum + 0.5;
+                break;
+            case "3":
+                Outpoint = Sum + 0.25;
+                break;
+            case "4":
+                Outpoint = Sum;
+                break;
+          }
+          document.getElementById("outpoint").textContent = "Tổng điểm thi đại học của bạn là: " + Outpoint;
+      }
+    </script>
+</body>
+</html>
